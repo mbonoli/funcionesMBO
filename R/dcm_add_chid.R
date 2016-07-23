@@ -1,4 +1,4 @@
-dcm_add_chid <- function(datalong, indvar, taskvar, subtaskvar=NULL, chidvarname="chid"){
+dcm_add_chid <- function(datalong, indvar="ind", taskvar="subtask", subtaskvar=NULL, chidvarname="chid"){
   if (is.null(subtaskvar)){
     datalong <- datalong[order(datalong[,indvar],datalong[,taskvar]),]
     chidkey <- table(paste0(prefix0(datalong[,indvar],5),"-",prefix0(datalong[,taskvar],5)))

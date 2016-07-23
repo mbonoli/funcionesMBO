@@ -32,11 +32,11 @@ dcm_check_datalong <- function(datalong, ind.var="ind",
     names(cXc) <- c("Nros ChoiceXtarea", "Nro tareas")
     print(cXc)
   } else {
-    cat(paste0("!!!! No se encontró la variable '",choice.var,"'.\n"))
+    cat(paste0("!!!! No se encontro la variable '",choice.var,"'.\n"))
   }
-    
+
   cat("\nChids correlativos\n")
   print(ifelse(length(unique(datalong$chid))==max(datalong$chid),"SI","NO"))
-  
+
   if (return.obj) result
 }
